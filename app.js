@@ -23,19 +23,19 @@ const sum = (a,b) => {
     // retornamos el valor
     return valueInDollar;
   } 
-  console.log(fromEuroToDollar(3.5))
+  console.log(fromEuroToDollar(10))
   
   const fromDollarToYen = function(valueInDollar) { 
     let valueInYen = (valueInDollar / oneEuroIs.USD) * oneEuroIs.JPY;
     return valueInYen; 
   }
-  console.log(fromDollarToYen(1))
+  console.log(fromDollarToYen(20))
   
-  const fromYenToPound = function() { 
-    let valueInPound = oneEuroIs.GBP / oneEuroIs.JPY  ;
+  const fromYenToPound = function(euross) { 
+    let valueInPound = euross * (oneEuroIs.GBP / oneEuroIs.JPY)  ;
     return valueInPound; 
   }
-  console.log(fromYenToPound(1))
+  console.log(fromYenToPound(3000))
   
   
   module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound };
