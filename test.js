@@ -23,7 +23,7 @@ test("One dollar should be 106.583 Yens", function(){
     const { fromDollarToYen } = require('./app.js')
     
     // hago mi comparacion (la prueba)
-    expect(fromDollarToYen(1)).toBe(106.58333333333334); 
+    expect(fromDollarToYen(1)).toBe((1 / 1.2) * 127.9); 
 })
 
 test("One Yen should be 0.00625", function(){
@@ -31,5 +31,5 @@ test("One Yen should be 0.00625", function(){
     const { fromYenToPound } = require('./app.js')
     
     // hago mi comparacion (la prueba)
-    expect(fromYenToPound(1)).toBe(0.006254886630179828); 
+    expect(fromYenToPound(1)).toBe(1 * (0.8 / 127.9 )); 
 })
